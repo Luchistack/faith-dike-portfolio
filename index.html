@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faith Dike | Backend Engineer</title>
+    <title>Faith Dike | Backend Engineer Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -26,65 +26,92 @@
 </head>
 <body class="bg-brand-black text-brand-textMain font-sans antialiased">
 
-    <!-- 1. HERO -->
-    <section class="max-w-5xl mx-auto px-6 pt-24 pb-20">
-        <h1 class="text-6xl font-black text-white tracking-tighter">FAITH DIKE</h1>
-        <p class="text-2xl text-brand-textMuted mt-4">Backend Engineer | Systems Architect</p>
-        <p class="mt-6 max-w-2xl text-lg leading-relaxed">Engineering resilient, scalable backend systems with a focus on clean architecture, modular monoliths, and event-driven design patterns.</p>
+    <!-- 1. NAVIGATION -->
+    <nav class="sticky top-0 z-50 bg-brand-black/80 backdrop-blur-md border-b border-brand-border">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#" class="text-2xl font-black text-white">FAITH<span class="text-brand-redAccent">.DIKE</span></a>
+            <div class="flex gap-6 text-sm font-medium text-brand-textMuted">
+                <a href="#backend" class="hover:text-brand-redAccent">Backend Engines</a>
+                <a href="#frontend" class="hover:text-brand-redAccent">Frontend UX</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. HERO -->
+    <section class="max-w-6xl mx-auto px-6 pt-24 pb-20">
+        <h1 class="text-7xl font-extrabold text-white tracking-tight">Backend Engineering & <br><span class="text-brand-redAccent">Systems Architecture</span></h1>
+        <p class="mt-8 text-xl text-brand-textMuted max-w-2xl leading-relaxed">
+            Full-stack developer specializing in clean architecture and strict separation of concerns. Building resilient backend infrastructures in Java, Python, and Go, complemented by responsive frontend interfaces.
+        </p>
     </section>
 
-    <!-- 2. BACKEND ENGINEERING (PRIORITY) -->
-    <section id="backend" class="max-w-5xl mx-auto px-6 py-20 border-t border-brand-border">
-        <h2 class="text-3xl font-bold mb-12 text-white border-l-4 border-brand-redAccent pl-4">Backend Systems & Architecture</h2>
+    <!-- 3. BACKEND ENGINES (PRIORITY) -->
+    <section id="backend" class="max-w-6xl mx-auto px-6 py-20 border-t border-brand-border">
+        <h2 class="text-3xl font-bold mb-12 text-white border-l-4 border-brand-redAccent pl-4">Backend Systems & Architectural Matrices</h2>
         
-        <div class="space-y-12">
-            <!-- marketHub -->
+        <div class="grid grid-cols-1 gap-8">
+            <!-- Project: marketHub -->
             <div class="bg-brand-darkGray p-8 rounded-xl border border-brand-border">
-                <h3 class="text-2xl font-bold text-white mb-4">marketHub Enterprise Service</h3>
-                <p class="text-brand-textMuted mb-4 leading-relaxed">Advanced multi-entity backend orchestrating relations between high-scale product catalogs and a custom customer wallet balance processing model. Enforces strict data safety properties to ensure wallet logic remains atomic and accurate.</p>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm font-mono mt-4 text-brand-redAccent">
-                    <p><strong>Pattern:</strong> Modular Monolith / Transactional Service</p>
-                    <p><strong>Stack:</strong> Java, Spring Data JPA, PostgreSQL</p>
+                <div class="flex justify-between items-start">
+                    <h3 class="text-2xl font-bold text-white">marketHub Enterprise Service</h3>
+                    <span class="bg-emerald-950 text-emerald-400 text-[10px] font-bold px-3 py-1 rounded-full border border-emerald-900">PRODUCTION READY</span>
+                </div>
+                <p class="text-brand-textMuted mt-4 leading-relaxed">Advanced multi-entity backend orchestrating relations between high-scale product catalogs and a custom customer wallet balance processing model. Enforces strict atomic transaction rules.</p>
+                <div class="mt-6 flex flex-wrap gap-3">
+                    <span class="bg-brand-black border border-brand-border px-3 py-1 rounded text-xs text-brand-textMuted font-mono">Java / Spring Data JPA</span>
+                    <span class="bg-brand-black border border-brand-border px-3 py-1 rounded text-xs text-brand-textMuted font-mono">Wallet Atomic Logic</span>
                 </div>
             </div>
 
-            <!-- Event System -->
+            <!-- Project: Event System -->
             <div class="bg-brand-darkGray p-8 rounded-xl border border-brand-border">
-                <h3 class="text-2xl font-bold text-white mb-4">Event Check-In System (Ventry)</h3>
-                <p class="text-brand-textMuted mb-4 leading-relaxed">Infrastructure designed for secure event access control, credential tracking, and robust multi-tier authentication paths. Optimized for high-performance processing of entry validation data.</p>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm font-mono mt-4 text-brand-redAccent">
-                    <p><strong>Pattern:</strong> Event-Driven / Auth Filters</p>
-                    <p><strong>Stack:</strong> Java, Spring Boot, Security Filters</p>
+                <div class="flex justify-between items-start">
+                    <h3 class="text-2xl font-bold text-white">Event Check-In System (Ventry)</h3>
+                    <span class="bg-blue-950 text-blue-400 text-[10px] font-bold px-3 py-1 rounded-full border border-blue-900">STABLE</span>
+                </div>
+                <p class="text-brand-textMuted mt-4 leading-relaxed">Secure event access control infrastructure. Implements credential tracking and multi-tier authentication filters to ensure performant entry validation.</p>
+                <div class="mt-6 flex flex-wrap gap-3">
+                    <span class="bg-brand-black border border-brand-border px-3 py-1 rounded text-xs text-brand-textMuted font-mono">Java / Spring Boot</span>
+                    <span class="bg-brand-black border border-brand-border px-3 py-1 rounded text-xs text-brand-textMuted font-mono">Authentication Filters</span>
                 </div>
             </div>
 
-            <!-- Hotel Management -->
+            <!-- Project: Hotel Management -->
             <div class="bg-brand-darkGray p-8 rounded-xl border border-brand-border">
-                <h3 class="text-2xl font-bold text-white mb-4">Hotel Management System</h3>
-                <p class="text-brand-textMuted mb-4 leading-relaxed">Relational database infrastructure addressing lodging dynamics, room allocation engines, and automated booking lifecycle rules. Focuses on entity relation keys avoiding state overlap during high concurrent requests.</p>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm font-mono mt-4 text-brand-redAccent">
-                    <p><strong>Pattern:</strong> RESTful Domain Modeling</p>
-                    <p><strong>Stack:</strong> Python, Django REST, PostgreSQL</p>
+                <div class="flex justify-between items-start">
+                    <h3 class="text-2xl font-bold text-white">Hotel Management System</h3>
+                    <span class="bg-amber-950 text-amber-400 text-[10px] font-bold px-3 py-1 rounded-full border border-amber-900">DOMAIN MODELING</span>
+                </div>
+                <p class="text-brand-textMuted mt-4 leading-relaxed">Relational database infrastructure for lodging dynamics and automated booking lifecycle rules. Focuses on minimizing state overlap during high concurrency.</p>
+                <div class="mt-6 flex flex-wrap gap-3">
+                    <span class="bg-brand-black border border-brand-border px-3 py-1 rounded text-xs text-brand-textMuted font-mono">Python / Django REST</span>
+                    <span class="bg-brand-black border border-brand-border px-3 py-1 rounded text-xs text-brand-textMuted font-mono">PostgreSQL Schemas</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 3. FRONTEND INTERFACES (SUPPORTING) -->
-    <section id="frontend" class="max-w-5xl mx-auto px-6 py-20 border-t border-brand-border">
-        <h2 class="text-3xl font-bold mb-4 text-white">Frontend Demonstrations</h2>
-        <p class="text-brand-textMuted mb-12 italic">*Note: These are independent UI/UX builds. Backend logic for these services is decoupled and resides in separate repositories.</p>
+    <!-- 4. FRONTEND UX (SUPPORTING) -->
+    <section id="frontend" class="max-w-6xl mx-auto px-6 py-20 border-t border-brand-border">
+        <h2 class="text-3xl font-bold mb-4 text-white border-l-4 border-brand-redAccent pl-4">Frontend Interface Demonstrations</h2>
+        <p class="text-brand-textMuted mb-12 italic">*Note: These are independent UI/UX builds. Backend logic is fully decoupled and maintained in separate repositories.</p>
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="p-6 border border-brand-border rounded-xl bg-brand-darkGray/50">
+            <!-- Boxx Popshop -->
+            <div class="p-8 border border-brand-border rounded-xl bg-brand-darkGray">
                 <h4 class="text-xl font-bold text-white">The Boxx Popshop UI</h4>
-                <p class="text-sm mt-2 text-brand-textMuted">Storefront layout managing menu arrays and inventory display.</p>
-                <span class="inline-block mt-4 text-[10px] font-bold text-brand-redAccent uppercase tracking-widest">Frontend Interface Only</span>
+                <p class="text-sm mt-3 text-brand-textMuted">Production-facing storefront layout for menu and inventory management.</p>
+                <span class="mt-4 block text-[10px] font-bold text-brand-redAccent uppercase tracking-widest">Frontend Interface Only</span>
             </div>
-            <div class="p-6 border border-brand-border rounded-xl bg-brand-darkGray/50">
-                <h4 class="text-xl font-bold text-white">Dinery Application UI</h4>
-                <p class="text-sm mt-2 text-brand-textMuted">Interactive dining interface for menu discovery and routing.</p>
-                <span class="inline-block mt-4 text-[10px] font-bold text-brand-redAccent uppercase tracking-widest">Frontend Interface Only</span>
+            
+            <!-- Kuda Clone -->
+            <div class="p-8 border border-brand-border rounded-xl bg-brand-darkGray">
+                <div class="flex justify-between">
+                    <h4 class="text-xl font-bold text-white">Kuda Banking Clone</h4>
+                    <span class="text-[9px] font-bold text-amber-500 uppercase">In Progress</span>
+                </div>
+                <p class="text-sm mt-3 text-brand-textMuted">Responsive financial landing layout with clean container mapping.</p>
+                <span class="mt-4 block text-[10px] font-bold text-brand-redAccent uppercase tracking-widest">Frontend Interface Only</span>
             </div>
         </div>
     </section>
