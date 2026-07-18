@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faith Dike | Backend Engineer Portfolio</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -15,6 +16,8 @@
                             darkGray: '#141414',
                             border: '#262626',
                             redAccent: '#dc2626',
+                            redHover: '#b91c1c',
+                            redMuted: '#450a0a',
                             textMain: '#f5f5f5',
                             textMuted: '#a3a3a3'
                         }
@@ -23,98 +26,242 @@
             }
         }
     </script>
+    <style>
+        html { scroll-behavior: smooth; }
+    </style>
 </head>
-<body class="bg-brand-black text-brand-textMain font-sans antialiased">
+<body class="bg-brand-black text-brand-textMain font-sans antialiased selection:bg-brand-redAccent selection:text-white">
 
-    <!-- 1. NAVIGATION -->
+    <!-- 1. NAVIGATION BAR -->
     <nav class="sticky top-0 z-50 bg-brand-black/80 backdrop-blur-md border-b border-brand-border">
         <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-            <a href="#" class="text-2xl font-black text-white">FAITH<span class="text-brand-redAccent">.DIKE</span></a>
-            <div class="flex gap-6 text-sm font-medium text-brand-textMuted">
-                <a href="#backend" class="hover:text-brand-redAccent">Backend Engines</a>
-                <a href="#frontend" class="hover:text-brand-redAccent">Frontend UX</a>
+            <a href="#" class="text-2xl md:text-3xl font-black tracking-tighter text-white">
+                FAITH<span class="text-brand-redAccent">.DIKE</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide">
+                <a href="#about" class="text-brand-textMuted hover:text-brand-redAccent transition">About</a>
+                <a href="#backend" class="text-brand-textMuted hover:text-brand-redAccent transition">Backend Engines</a>
+                <a href="#skills" class="text-brand-textMuted hover:text-brand-redAccent transition">Ecosystem</a>
+                <a href="#frontend" class="text-brand-textMuted hover:text-brand-redAccent transition">Frontend UX</a>
+            </div>
+            <div>
+                <a href="#connect" class="bg-brand-redAccent hover:bg-brand-redHover text-white text-xs font-bold uppercase tracking-wider px-4 py-2 rounded transition">
+                    Contact
+                </a>
             </div>
         </div>
     </nav>
 
-    <!-- 2. HERO -->
-    <section class="max-w-6xl mx-auto px-6 pt-24 pb-20">
-        <h1 class="text-7xl font-extrabold text-white tracking-tight">Backend Engineering & <br><span class="text-brand-redAccent">Systems Architecture</span></h1>
-        <p class="mt-8 text-xl text-brand-textMuted max-w-2xl leading-relaxed">
-            Full-stack developer specializing in clean architecture and strict separation of concerns. Building resilient backend infrastructures in Java, Python, and Go, complemented by responsive frontend interfaces.
-        </p>
+    <!-- 2. HERO SECTION -->
+    <section id="about" class="max-w-6xl mx-auto px-6 pt-24 pb-20 border-b border-brand-border flex flex-col justify-center min-h-[75vh]">
+        <div class="max-w-3xl">
+            <span class="inline-flex items-center gap-2 bg-brand-redMuted/50 text-brand-redAccent text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full border border-brand-redAccent/30 mb-6">
+                <span class="w-2 h-2 rounded-full bg-brand-redAccent animate-pulse"></span> Backend Engineer
+            </span>
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-white leading-none">
+                Engineering resilient <span class="text-brand-redAccent">backend systems</span>.
+            </h1>
+            <p class="text-lg md:text-xl text-brand-textMuted mt-6 leading-relaxed max-w-2xl">
+                Backend engineer specializing in distributed microservices, event-driven design patterns, modular monolith architectures, and high-performance system routing layers.
+            </p>
+            <div class="mt-10 flex flex-wrap gap-4">
+                <a href="#backend" class="bg-brand-redAccent hover:bg-brand-redHover text-white font-semibold px-6 py-3 rounded-lg shadow-lg shadow-brand-redAccent/20 transition">
+                    View Architecture Matrix
+                </a>
+                <a href="https://github.com/Luchistack" target="_blank" class="bg-brand-darkGray hover:bg-neutral-800 text-white font-medium px-6 py-3 rounded-lg border border-brand-border transition">
+                    Explore GitHub Profile
+                </a>
+            </div>
+        </div>
     </section>
 
-    <!-- 3. BACKEND ENGINES (PRIORITY) -->
-    <section id="backend" class="max-w-6xl mx-auto px-6 py-20 border-t border-brand-border">
-        <h2 class="text-3xl font-bold mb-12 text-white border-l-4 border-brand-redAccent pl-4">Backend Systems & Architectural Matrices</h2>
+    <!-- 3. BACKEND REPOSITORIES MATRIX (MOVED UP) -->
+    <section id="backend" class="max-w-6xl mx-auto px-6 py-20 border-b border-brand-border">
+        <div class="mb-12">
+            <h2 class="text-xs font-bold uppercase tracking-widest text-brand-redAccent mb-2">Local Development Environment</h2>
+            <h3 class="text-3xl font-bold text-white tracking-tight">Core Backend Frameworks & Systems Matrix</h3>
+            <p class="text-brand-textMuted text-sm mt-2">Active package configurations and architectural schemas mapped on Linux environment local directory layers. I prioritize clean architecture and separation of concerns across all modules.</p>
+        </div>
         
-        <div class="grid grid-cols-1 gap-8">
-            <!-- Project: marketHub -->
-            <div class="bg-brand-darkGray p-8 rounded-xl border border-brand-border">
-                <div class="flex justify-between items-start">
-                    <h3 class="text-2xl font-bold text-white">marketHub Enterprise Service</h3>
-                    <span class="bg-emerald-950 text-emerald-400 text-[10px] font-bold px-3 py-1 rounded-full border border-emerald-900">PRODUCTION READY</span>
-                </div>
-                <p class="text-brand-textMuted mt-4 leading-relaxed">Advanced multi-entity backend orchestrating relations between high-scale product catalogs and a custom customer wallet balance processing model. Enforces strict atomic transaction rules.</p>
-                <div class="mt-6 flex flex-wrap gap-3">
-                    <span class="bg-brand-black border border-brand-border px-3 py-1 rounded text-xs text-brand-textMuted font-mono">Java / Spring Data JPA</span>
-                    <span class="bg-brand-black border border-brand-border px-3 py-1 rounded text-xs text-brand-textMuted font-mono">Wallet Atomic Logic</span>
+        <div class="space-y-6">
+            <!-- 1. Event System -->
+            <div class="bg-brand-darkGray p-8 rounded-xl border border-brand-border hover:border-brand-redAccent/40 transition">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                    <div>
+                        <h4 class="text-xl font-bold text-white tracking-tight">Event System</h4>
+                        <p class="text-brand-textMuted text-sm mt-2">Engineered secure gateways with credential tracking and complex multi-tier authentication paths to ensure data integrity.</p>
+                    </div>
+                    <a href="https://github.com/Luchistack/Event-Check-In-System-Ventry-" target="_blank" class="text-xs bg-brand-black px-4 py-2 rounded-md border border-brand-border hover:border-brand-redAccent transition font-mono">/Event-System ↗</a>
                 </div>
             </div>
 
-            <!-- Project: Event System -->
-            <div class="bg-brand-darkGray p-8 rounded-xl border border-brand-border">
-                <div class="flex justify-between items-start">
-                    <h3 class="text-2xl font-bold text-white">Event Check-In System (Ventry)</h3>
-                    <span class="bg-blue-950 text-blue-400 text-[10px] font-bold px-3 py-1 rounded-full border border-blue-900">STABLE</span>
-                </div>
-                <p class="text-brand-textMuted mt-4 leading-relaxed">Secure event access control infrastructure. Implements credential tracking and multi-tier authentication filters to ensure performant entry validation.</p>
-                <div class="mt-6 flex flex-wrap gap-3">
-                    <span class="bg-brand-black border border-brand-border px-3 py-1 rounded text-xs text-brand-textMuted font-mono">Java / Spring Boot</span>
-                    <span class="bg-brand-black border border-brand-border px-3 py-1 rounded text-xs text-brand-textMuted font-mono">Authentication Filters</span>
+            <!-- 2. marketHub -->
+            <div class="bg-brand-darkGray p-8 rounded-xl border border-brand-border hover:border-brand-redAccent/40 transition">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                    <div>
+                        <h4 class="text-xl font-bold text-white tracking-tight">marketHub Enterprise Service</h4>
+                        <p class="text-brand-textMuted text-sm mt-2">Built for high-scale product catalogs and atomic customer wallet balance processing, ensuring transactional consistency.</p>
+                    </div>
+                    <a href="https://github.com/Luchistack/marketHub" target="_blank" class="text-xs bg-brand-black px-4 py-2 rounded-md border border-brand-border hover:border-brand-redAccent transition font-mono">/marketHub ↗</a>
                 </div>
             </div>
 
-            <!-- Project: Hotel Management -->
-            <div class="bg-brand-darkGray p-8 rounded-xl border border-brand-border">
-                <div class="flex justify-between items-start">
-                    <h3 class="text-2xl font-bold text-white">Hotel Management System</h3>
-                    <span class="bg-amber-950 text-amber-400 text-[10px] font-bold px-3 py-1 rounded-full border border-amber-900">DOMAIN MODELING</span>
+            <!-- 3. The Boxx Popshop Backend -->
+            <div class="bg-brand-darkGray p-8 rounded-xl border border-brand-border hover:border-brand-redAccent/40 transition">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                    <div>
+                        <h4 class="text-xl font-bold text-white tracking-tight">The Boxx Popshop Backend Engine</h4>
+                        <p class="text-brand-textMuted text-sm mt-2">Developed using FastAPI to handle robust menu queries and implement strict business transaction validation logic.</p>
+                    </div>
+                    <a href="https://github.com/Luchistack/The-Boxx-Popshop-Backend" target="_blank" class="text-xs bg-brand-black px-4 py-2 rounded-md border border-brand-border hover:border-brand-redAccent transition font-mono">/TheBoxxPopshop ↗</a>
                 </div>
-                <p class="text-brand-textMuted mt-4 leading-relaxed">Relational database infrastructure for lodging dynamics and automated booking lifecycle rules. Focuses on minimizing state overlap during high concurrency.</p>
-                <div class="mt-6 flex flex-wrap gap-3">
-                    <span class="bg-brand-black border border-brand-border px-3 py-1 rounded text-xs text-brand-textMuted font-mono">Python / Django REST</span>
-                    <span class="bg-brand-black border border-brand-border px-3 py-1 rounded text-xs text-brand-textMuted font-mono">PostgreSQL Schemas</span>
+            </div>
+
+            <!-- 4. No Strings Simple -->
+            <div class="bg-brand-darkGray p-8 rounded-xl border border-brand-border hover:border-brand-redAccent/40 transition">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                    <div>
+                        <h4 class="text-xl font-bold text-white tracking-tight">No Strings Simple</h4>
+                        <p class="text-brand-textMuted text-sm mt-2">Scalable API for social discovery and user profile management, leveraging Maven for dependency lifecycle management.</p>
+                    </div>
+                    <a href="https://github.com/Luchistack/noStringsMaven" target="_blank" class="text-xs bg-brand-black px-4 py-2 rounded-md border border-brand-border hover:border-brand-redAccent transition font-mono">/NoStringsSimple ↗</a>
+                </div>
+            </div>
+
+            <!-- 5. HotelManagementSystem -->
+            <div class="bg-brand-darkGray p-8 rounded-xl border border-brand-border hover:border-brand-redAccent/40 transition">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                    <div>
+                        <h4 class="text-xl font-bold text-white tracking-tight">Hotel Management System Core</h4>
+                        <p class="text-brand-textMuted text-sm mt-2">Architected a relational database infrastructure to manage room allocation and automated booking lifecycle rules.</p>
+                    </div>
+                    <a href="https://github.com/Luchistack/Hotel-Management-System.git" target="_blank" class="text-xs bg-brand-black px-4 py-2 rounded-md border border-brand-border hover:border-brand-redAccent transition font-mono">/HotelManagementSystem ↗</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 4. FRONTEND UX (SUPPORTING) -->
-    <section id="frontend" class="max-w-6xl mx-auto px-6 py-20 border-t border-brand-border">
-        <h2 class="text-3xl font-bold mb-4 text-white border-l-4 border-brand-redAccent pl-4">Frontend Interface Demonstrations</h2>
-        <p class="text-brand-textMuted mb-12 italic">*Note: These are independent UI/UX builds. Backend logic is fully decoupled and maintained in separate repositories.</p>
+    <!-- 4. TECHNICAL ECOSYSTEM -->
+    <section id="skills" class="max-w-6xl mx-auto px-6 py-20 border-b border-brand-border">
+        <div class="flex flex-col md:flex-row md:items-start justify-between gap-8 mb-12">
+            <div>
+                <h2 class="text-xs font-bold uppercase tracking-widest text-brand-redAccent mb-2">Capabilities</h2>
+                <h3 class="text-3xl font-bold text-white tracking-tight">Technical Architecture Stack</h3>
+            </div>
+            <p class="text-brand-textMuted max-w-md text-sm md:text-base">
+                A core breakdown of the languages, structural frameworks, and query engines I handle inside local environments.
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="bg-brand-darkGray p-6 rounded-xl border border-brand-border">
+                <h4 class="text-xs font-bold uppercase tracking-wider text-brand-redAccent mb-3">Languages</h4>
+                <p class="text-sm text-neutral-300 font-mono leading-relaxed">Java, Python, Go, JavaScript</p>
+            </div>
+            <div class="bg-brand-darkGray p-6 rounded-xl border border-brand-border">
+                <h4 class="text-xs font-bold uppercase tracking-wider text-brand-redAccent mb-3">Frameworks</h4>
+                <p class="text-sm text-neutral-300 font-mono leading-relaxed">Spring Boot, FastAPI, Django REST</p>
+            </div>
+            <div class="bg-brand-darkGray p-6 rounded-xl border border-brand-border">
+                <h4 class="text-xs font-bold uppercase tracking-wider text-brand-redAccent mb-3">Data Engines</h4>
+                <p class="text-sm text-neutral-300 font-mono leading-relaxed">PostgreSQL, SQL, DBeaver</p>
+            </div>
+            <div class="bg-brand-darkGray p-6 rounded-xl border border-brand-border">
+                <h4 class="text-xs font-bold uppercase tracking-wider text-brand-redAccent mb-3">Patterns & Environments</h4>
+                <p class="text-sm text-neutral-300 font-mono leading-relaxed">Microservices, Event-Driven Design, Modular Monoliths, Linux, Git</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. LIVE FRONTEND SECTION -->
+    <section id="frontend" class="max-w-6xl mx-auto px-6 py-20 border-b border-brand-border">
+        <div class="mb-12">
+            <h2 class="text-xs font-bold uppercase tracking-widest text-brand-redAccent mb-2">Interfaces</h2>
+            <h3 class="text-3xl font-bold text-white tracking-tight">Deployed Frontend Builds & Client Layouts</h3>
+            <p class="text-brand-textMuted mt-4 text-sm italic">
+                *Note: These are independent frontend interface demonstrations. Backend logic and system architectures are decoupled and documented in my primary service repositories above.
+            </p>
+        </div>
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <!-- Boxx Popshop -->
-            <div class="p-8 border border-brand-border rounded-xl bg-brand-darkGray">
-                <h4 class="text-xl font-bold text-white">The Boxx Popshop UI</h4>
-                <p class="text-sm mt-3 text-brand-textMuted">Production-facing storefront layout for menu and inventory management.</p>
-                <span class="mt-4 block text-[10px] font-bold text-brand-redAccent uppercase tracking-widest">Frontend Interface Only</span>
-            </div>
-            
-            <!-- Kuda Clone -->
-            <div class="p-8 border border-brand-border rounded-xl bg-brand-darkGray">
-                <div class="flex justify-between">
-                    <h4 class="text-xl font-bold text-white">Kuda Banking Clone</h4>
-                    <span class="text-[9px] font-bold text-amber-500 uppercase">In Progress</span>
+            <a href="https://theboxx-popshop.vercel.app/" target="_blank" class="block bg-brand-darkGray p-8 rounded-2xl border border-brand-border hover:border-brand-redAccent/50 transition duration-300 flex flex-col justify-between group">
+                <div>
+                    <h4 class="text-xl font-bold text-white tracking-tight group-hover:text-brand-redAccent transition">The Boxx Popshop Web Application</h4>
+                    <p class="text-brand-textMuted text-sm mt-3 leading-relaxed">A production-facing storefront web layout managing menu arrays and restaurant inventory displays. <span class="text-brand-redAccent font-semibold block mt-2 text-xs uppercase tracking-wider">Frontend Interface Only</span></p>
                 </div>
-                <p class="text-sm mt-3 text-brand-textMuted">Responsive financial landing layout with clean container mapping.</p>
-                <span class="mt-4 block text-[10px] font-bold text-brand-redAccent uppercase tracking-widest">Frontend Interface Only</span>
-            </div>
+                <div class="mt-8 pt-4 border-t border-brand-border flex items-center justify-between">
+                    <span class="text-xs font-mono text-neutral-500">HTML5 • CSS3 • JavaScript</span>
+                    <span class="text-xs text-brand-redAccent font-bold hover:underline tracking-wide uppercase">Live UI Link ↗</span>
+                </div>
+            </a>
+
+            <a href="https://dinery-ochre.vercel.app/" target="_blank" class="block bg-brand-darkGray p-8 rounded-2xl border border-brand-border hover:border-brand-redAccent/50 transition duration-300 flex flex-col justify-between group">
+                <div>
+                    <h4 class="text-xl font-bold text-white tracking-tight group-hover:text-brand-redAccent transition">Dinery Application UI</h4>
+                    <p class="text-brand-textMuted text-sm mt-3 leading-relaxed">An interactive dining interface layout engineered for user discovery and aesthetic menu navigation. <span class="text-brand-redAccent font-semibold block mt-2 text-xs uppercase tracking-wider">Frontend Interface Only</span></p>
+                </div>
+                <div class="mt-8 pt-4 border-t border-brand-border flex items-center justify-between">
+                    <span class="text-xs font-mono text-neutral-500">React • Tailwind CSS</span>
+                    <span class="text-xs text-brand-redAccent font-bold hover:underline tracking-wide uppercase">Live UI Link ↗</span>
+                </div>
+            </a>
+
+            <a href="https://luchistack-kuda.netlify.app/" target="_blank" class="block bg-brand-darkGray p-8 rounded-2xl border border-brand-border hover:border-brand-redAccent/50 transition duration-300 flex flex-col justify-between group">
+                <div>
+                    <h4 class="text-xl font-bold text-white tracking-tight group-hover:text-brand-redAccent transition">Kuda Digital Bank Clone</h4>
+                    <p class="text-brand-textMuted text-sm mt-3 leading-relaxed">A responsive banking landing layout. <span class="text-brand-redAccent font-semibold block mt-2 text-xs uppercase tracking-wider">Frontend Interface Only</span></p>
+                </div>
+                <div class="mt-8 pt-4 border-t border-brand-border flex items-center justify-between">
+                    <span class="text-xs font-mono text-neutral-500">HTML5 • CSS3 • Netlify</span>
+                    <span class="text-xs text-brand-redAccent font-bold hover:underline tracking-wide uppercase">Review UI ↗</span>
+                </div>
+            </a>
+
+            <a href="https://biccas-three.vercel.app" target="_blank" class="block bg-brand-darkGray p-8 rounded-2xl border border-brand-border hover:border-brand-redAccent/50 transition duration-300 flex flex-col justify-between group">
+                <div>
+                    <h4 class="text-xl font-bold text-white tracking-tight group-hover:text-brand-redAccent transition">Biccas Platform Dashboard</h4>
+                    <p class="text-brand-textMuted text-sm mt-3 leading-relaxed">A workspace management system UI layout. <span class="text-brand-redAccent font-semibold block mt-2 text-xs uppercase tracking-wider">Frontend Interface Only</span></p>
+                </div>
+                <div class="mt-8 pt-4 border-t border-brand-border flex items-center justify-between">
+                    <span class="text-xs font-mono text-neutral-500">HTML5 • CSS3</span>
+                    <span class="text-xs text-brand-redAccent font-bold hover:underline tracking-wide uppercase">Live UI Link ↗</span>
+                </div>
+            </a>
         </div>
     </section>
+
+    <!-- 6. INTERACTIVE CONTACT SECTION -->
+    <section id="connect" class="max-w-6xl mx-auto px-6 py-20 bg-brand-darkGray/30 rounded-3xl my-10 border border-brand-border/50 text-center">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-brand-redAccent mb-2">Initiate Communications</h2>
+        <h3 class="text-3xl font-bold text-white tracking-tight mb-8">Let's build reliable architectures together</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
+            <a href="mailto:ftoluchi@gmail.com" class="bg-brand-darkGray p-4 rounded-xl border border-brand-border hover:border-brand-redAccent text-sm transition font-medium flex items-center justify-center gap-2 text-neutral-200">
+                <span>📧 Email Me</span>
+            </a>
+            <a href="https://www.linkedin.com/in/dike-faith" target="_blank" class="bg-brand-darkGray p-4 rounded-xl border border-brand-border hover:border-brand-redAccent text-sm transition font-medium flex items-center justify-center gap-2 text-neutral-200">
+                <span>💼 LinkedIn Profile</span>
+            </a>
+            <a href="https://github.com/Luchistack" target="_blank" class="bg-brand-darkGray p-4 rounded-xl border border-brand-border hover:border-brand-redAccent text-sm transition font-medium flex items-center justify-center gap-2 text-neutral-200">
+                <span>💻 GitHub Main</span>
+            </a>
+            <a href="tel:+2347073882824" class="bg-brand-darkGray p-4 rounded-xl border border-brand-border hover:border-brand-redAccent text-sm transition font-medium flex items-center justify-center gap-2 text-neutral-200">
+                <span>📞 Call Dev Line</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- 7. FOOTER -->
+    <footer class="bg-brand-darkGray border-t border-brand-border">
+        <div class="max-w-6xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center justify-between gap-6 text-sm">
+            <p class="text-brand-textMuted font-mono text-xs">
+                © 2026 Faith Dike. Tailored for backend engineering discipline.
+            </p>
+            <div class="flex gap-6 text-brand-textMuted font-medium">
+                <a href="https://github.com/Luchistack" target="_blank" class="hover:text-brand-redAccent transition">GitHub</a>
+                <a href="https://www.linkedin.com/in/dike-faith" target="_blank" class="hover:text-brand-redAccent transition">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
